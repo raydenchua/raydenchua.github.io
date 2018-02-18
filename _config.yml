@@ -5,7 +5,7 @@ description:        "Welcome! This is where I write about Data Science and the p
 reading_time:       true
 words_per_minute:   200
 logo:               'assets/img/logo2.png'
-background:         'assets/img/bg.jpg'
+background:         'assets/img/placeholder-big.jpg'
 tiled_bg:           false   # Set this true if you want to tile your background image, otherwise it will be covered
 locale:             en_US
 url:                https://raydenchua.github.io
