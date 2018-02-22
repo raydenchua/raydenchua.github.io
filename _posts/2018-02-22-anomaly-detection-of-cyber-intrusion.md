@@ -227,9 +227,8 @@ can do.
 Next, I plotted the distribution plots of all 72 of the numerical
 features, each feature comparing the distribution between the benign
 class and hostile classes. Because of the large amount of benign class,
-the hostile classes' distribution were not visible in the each feature's
-plot. (Due to the large number of plots, please refer to my **Jupyter
-Notebook** to view the plots)
+the hostile classes' distribution were not very visible in the each feature's
+plot. (please click <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/features_dist.png">**here**</a> to view the plots)
 
 ## Features Selection
 
@@ -330,7 +329,7 @@ test set.
 <figure>
     <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/1a_logregnobal.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/1a_logregnobal.PNG"></a>
     <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/1b_logregnobal_classrpt.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/1b_logregnobal_classrpt.PNG"></a>
-    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/1c_logregnobal_cm.png"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/1c_logregnobal_cm.png"></a>
+    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/1c_logregnobal_cm.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/1c_logregnobal_cm.PNG"></a>
 </figure>
 
 As expected, the model has difficulty predicting the minority classes,
