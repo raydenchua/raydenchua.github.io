@@ -189,8 +189,9 @@ to approx. 750MB. (More than halved the size, Perfect!)
 
 First, let's look into the distribution of class labels,
 
-![](media/image3.png){width="6.268055555555556in"
-height="4.511805555555555in"}
+<figure>
+    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/features_dist.png"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/features_dist.png"></a>
+</figure>
 
 You can see that the imbalances between the classes are huge, some of
 the hostile classes are so scarce that they cannot be seen when plotted
@@ -253,8 +254,9 @@ with the target variable. The highest correlation were 0.287476 and
 -0.287116. I decided to filter out features with less than 0.05
 correlation and with the remaining features, I plotted a heatmap:
 
-![](media/image4.png){width="6.268055555555556in"
-height="4.309027777777778in"}
+<figure>
+    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/heatmap.png"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/heatmap.png"></a>
+</figure>
 
 With the heatmap, I was able to remove the independent features which
 have high correlation with other independent features, in order to
@@ -276,8 +278,9 @@ features were chosen:
 \'Avg\_Fwd\_Segment\_Size\', \'Fwd\_Packet\_Length\_Min\',
 \'URG\_Flag\_Count\', \'Destination\_Port\'
 
-![](media/image5.png){width="6.2827066929133855in"
-height="4.364583333333333in"}
+<figure>
+    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/radviz.png"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/radviz.png"></a>
+</figure>
 
 As seen from the RadViz plot, there are no clear distinction between the
 classes. They seem to overlap each other quite badly.
@@ -324,10 +327,11 @@ better. Without handling the heavily imbalanced data the trained model
 will likely have difficulties predicting the minority classes on the
 test set.
 
-![](media/image6.PNG){width="6.268055555555556in"
-height="1.163888888888889in"}![](media/image7.PNG){width="5.46951334208224in"
-height="3.698432852143482in"}![](media/image8.PNG){width="6.268055555555556in"
-height="3.675in"}
+<figure>
+    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/1a_logregnobal.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/1a_logregnobal.PNG"></a>
+    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/1b_logregnobal_classrpt.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/1b_logregnobal_classrpt.PNG"></a>
+    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/1c_logregnobal_cm.png"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/1c_logregnobal_cm.png"></a>
+</figure>
 
 As expected, the model has difficulty predicting the minority classes,
 with most of them having 0 recall and precision. The number of hostile
