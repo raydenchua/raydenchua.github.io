@@ -83,7 +83,7 @@ Most of the features can generally be grouped into the following:
 9.  **Amount of time a flow was idle before becoming active --**
     Idle\_Mean, Idle\_Std, Idle\_Max, Idle\_Min
 
-10. **Inter Arrival Time (time between 2 packets sent)-- **
+10. **Inter Arrival Time (time between 2 packets sent) --**
     Flow\_IAT\_Mean, Flow\_IAT\_Std, Flow\_IAT\_Max, Flow\_IAT\_Min,
     Fwd\_IAT\_Total, Fwd\_IAT\_Mean, Fwd\_IAT\_Std, Fwd\_IAT\_Max,
     Fwd\_IAT\_Min, Bwd\_IAT\_Total, Bwd\_IAT\_Mean, Bwd\_IAT\_Std,
@@ -97,7 +97,7 @@ Most of the features can generally be grouped into the following:
     URG\_Flag\_Count, CWE\_Flag\_Count, ECE\_Flag\_Count
 
 12. **Flow labels --** Label 
-    The 15 labels are: BENIGN, FTP-Patator, SSH-Patator, DoS slowloris, DoS Slowhttptest, DoS Hulk, DoS GoldenEye, Heartbleed, Web Attack -- Brute Force, Web Attack -- XSS, Web Attack -- Sql Injection, Infiltration, Bot, DDoS , PortScan
+    (The 15 labels are: BENIGN, FTP-Patator, SSH-Patator, DoS slowloris, DoS Slowhttptest, DoS Hulk, DoS GoldenEye, Heartbleed, Web Attack -- Brute Force, Web Attack -- XSS, Web Attack -- Sql Injection, Infiltration, Bot, DDoS , PortScan)
 
 For a more detailed description of each feature, please refer to the
 excel file on **my github**.
