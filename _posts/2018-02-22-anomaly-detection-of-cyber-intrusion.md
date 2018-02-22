@@ -60,7 +60,7 @@ Most of the features can generally be grouped into the following:
 
 3.  **Transport Protocol (TCP:6, UDP:17) -** Protocol
 
-4.  **Number of packets--** Total\_Fwd\_Packets, Total\_Backward\_Packets, Subflow\_Fwd\_Packets, Subflow\_Bwd\_Packets, Flow\_Packets\_persec, act\_data\_pkt\_fwd,
+4.  **Number of packets --** Total\_Fwd\_Packets, Total\_Backward\_Packets, Subflow\_Fwd\_Packets, Subflow\_Bwd\_Packets, Flow\_Packets\_persec, act\_data\_pkt\_fwd,
 
 5.  **Packet Size --** Total\_Length\_of\_Fwd\_Packets,
     Total\_Length\_of\_Bwd\_Packets, Fwd\_Packet\_Length\_Max,
@@ -73,17 +73,17 @@ Most of the features can generally be grouped into the following:
     Average\_Packet\_Size, min\_seg\_size\_forward,
     Init\_Win\_bytes\_forward, Init\_Win\_bytes\_backward
 
-6.  **Packet Header Size -** Fwd\_Header\_Length, Bwd\_Header\_Length
+6.  **Packet Header Size --** Fwd\_Header\_Length, Bwd\_Header\_Length
 
-7.  **Flow Duration -** Flow\_Duration
+7.  **Flow Duration --** Flow\_Duration
 
-8.  **Amount of time a flow was active before going idle -**
+8.  **Amount of time a flow was active before going idle --**
     Active\_Mean, Active\_Std, Active\_Max, Active\_Min
 
-9.  **Amount of time a flow was idle before becoming active** -
+9.  **Amount of time a flow was idle before becoming active --**
     Idle\_Mean, Idle\_Std, Idle\_Max, Idle\_Min
 
-10. **Inter Arrival Time (time between 2 packets sent)** -
+10. **Inter Arrival Time (time between 2 packets sent)-- **
     Flow\_IAT\_Mean, Flow\_IAT\_Std, Flow\_IAT\_Max, Flow\_IAT\_Min,
     Fwd\_IAT\_Total, Fwd\_IAT\_Mean, Fwd\_IAT\_Std, Fwd\_IAT\_Max,
     Fwd\_IAT\_Min, Bwd\_IAT\_Total, Bwd\_IAT\_Mean, Bwd\_IAT\_Std,
@@ -91,7 +91,7 @@ Most of the features can generally be grouped into the following:
 
 11. **TCP flags** **(TCP flags are used within TCP packet transfers to
     indicate a particular connection state or provide additional
-    information)** - Fwd\_PSH\_Flags, Bwd\_PSH\_Flags, Fwd\_URG\_Flags,
+    information) --** Fwd\_PSH\_Flags, Bwd\_PSH\_Flags, Fwd\_URG\_Flags,
     Bwd\_URG\_Flags, FIN\_Flag\_Count, SYN\_Flag\_Count,
     RST\_Flag\_Count, PSH\_Flag\_Count, ACK\_Flag\_Count,
     URG\_Flag\_Count, CWE\_Flag\_Count, ECE\_Flag\_Count
