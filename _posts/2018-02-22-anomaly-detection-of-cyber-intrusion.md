@@ -99,9 +99,6 @@ Most of the features can generally be grouped into the following:
 12. **Flow labels --** Label 
     (The 15 labels are: BENIGN, FTP-Patator, SSH-Patator, DoS slowloris, DoS Slowhttptest, DoS Hulk, DoS GoldenEye, Heartbleed, Web Attack -- Brute Force, Web Attack -- XSS, Web Attack -- Sql Injection, Infiltration, Bot, DDoS , PortScan)
 
-For a more detailed description of each feature, please refer to the
-excel file on **my github**.
-
 **Citation:** *Iman Sharafaldin, Arash Habibi Lashkari, and Ali A.
 Ghorbani, "Toward Generating a New Intrusion Detection Dataset and
 Intrusion Traffic Characterization", 4th International Conference on
