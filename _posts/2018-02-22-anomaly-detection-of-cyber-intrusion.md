@@ -402,11 +402,14 @@ size of the benign class (1769353 counts). The classes with counts less
 than 4000 were up sampled to 4000 and those with more than 4000 will
 remain as they are.
 
-![](media/image20.PNG){width="6.268055555555556in"
-height="1.8881944444444445in"}![](media/image21.PNG){width="6.268055555555556in"
-height="1.70625in"}![](media/image22.PNG){width="5.448676727909011in"
-height="3.594251968503937in"}![](media/image23.PNG){width="6.268055555555556in"
-height="3.879861111111111in"}The results is relatively good but the
+<figure>
+    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/5a_ros.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/5a_ros.PNG"></a>
+    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/5b_roslogreg.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/5b_roslogreg.PNG"></a>
+    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/5c_roslogreg_classrpt.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/5c_roslogreg_classrpt.PNG"></a>
+    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/5d_roslogreg_cm.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/5d_roslogreg_cm.PNG"></a>
+</figure>
+
+The results is relatively good but the
 RandomUnderSampler still had better results. 207 attacks classed as
 benign.
 
@@ -414,13 +417,12 @@ benign.
 
 Same ratio used as the RandomOverSampler.
 
-![](media/image24.PNG){width="6.268055555555556in"
-height="1.8736111111111111in"}![](media/image25.PNG){width="6.268055555555556in"
-height="1.2395833333333333in"}![](media/image26.PNG){width="5.459095581802274in"
-height="3.5838331146106737in"}
-
-![](media/image27.PNG){width="6.268055555555556in"
-height="3.9069444444444446in"}
+<figure>
+    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/6a_smote.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/6a_smote.PNG"></a>
+    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/6b_smotelogreg.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/6b_smotelogreg.PNG"></a>
+    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/6c_smotelogreg_classrpt.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/6c_smotelogreg_classrpt.PNG"></a>
+    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/6d_smotelogreg_cm.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/6d_smotelogreg_cm.PNG"></a>
+</figure>
 
 SMOTE seems to have performed quite well for us here, it is the better
 oversampler compared to RandomOverSampler. The number of attacks wrongly
@@ -438,38 +440,43 @@ classes with counts lower than mean/median to that mean/median count.
 
 With this method the class count will balance up nicely.
 
-![](media/image28.PNG){width="6.268055555555556in"
-height="4.013888888888889in"}
-
+<figure>
+    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/7_ms function.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/7_ms function.PNG"></a>
+</figure>
 I first tried using the mean count as the ratio to balance the data up.
 The under sampler and over sampler used were set as default
 (RandomUnderSampler and RandomOverSampler).
 
-![](media/image29.PNG){width="6.268055555555556in"
-height="1.1104166666666666in"}![](media/image30.PNG){width="6.268055555555556in"
-height="1.5923611111111111in"}![](media/image31.PNG){width="5.459095581802274in"
-height="3.656760717410324in"}![](media/image32.PNG){width="6.268055555555556in"
-height="3.8944444444444444in"}
+<figure>
+    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/7a_msmean.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/7a_msmean.PNG"></a>
+    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/7b_msmeanlogreg.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/7b_msmeanlogreg.PNG"></a>
+    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/7c_msmeanlogreg_classrpt.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/7c_msmeanlogreg_classrpt.PNG"></a>
+    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/7d_msmeanlogreg_cm.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/7d_msmeanlogreg_cm.PNG"></a>
+</figure>
 
 Pretty decent results. 106 attacks wrongly classed as benign.
 
 Next, I proceeded with using the median as ratio.
 
-![](media/image33.PNG){width="6.268055555555556in"
-height="1.1076388888888888in"}![](media/image34.PNG){width="6.268055555555556in"
-height="1.4854166666666666in"}![](media/image35.PNG){width="5.479931102362205in"
-height="3.6255063429571304in"}![](media/image36.PNG){width="6.268055555555556in"
-height="3.8854166666666665in"}Even better results using the median
+<figure>
+    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/8a_msmed.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/8a_msmed.PNG"></a>
+    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/8b_msmedlogreg.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/8b_msmedlogreg.PNG"></a>
+    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/8c_msmedlogreg_classrpt.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/8c_msmedlogreg_classrpt.PNG"></a>
+    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/8d_msmedlogreg_cm.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/8d_msmedlogreg_cm.PNG"></a>
+</figure>
+
+Even better results using the median
 value. Only 95 attacks were wrongly classed as benign.
 
 Lastly, I will try changing the oversampler to SMOTE, since it produced
 better results than RandomOverSampler previously.
 
-![](media/image37.PNG){width="6.268055555555556in"
-height="1.1020833333333333in"}![](media/image38.PNG){width="6.268055555555556in"
-height="1.16875in"}![](media/image39.PNG){width="5.46951334208224in"
-height="3.656760717410324in"}![](media/image40.PNG){width="6.268055555555556in"
-height="4.045138888888889in"}
+<figure>
+    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/9a_smotems.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/9a_smotems.PNG"></a>
+    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/9b_smotemslogreg.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/9b_smotemslogreg.PNG"></a>
+    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/9c_smotemslogreg_classrpt.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/9c_smotemslogreg_classrpt.PNG"></a>
+    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/9d_smotemslogreg_cm.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/9d_smotemslogreg_cm.PNG"></a>
+</figure>
 
 Best results we have gotten so far using just logistic regression! There
 are only 71 attacks wrongly classed as benign.
