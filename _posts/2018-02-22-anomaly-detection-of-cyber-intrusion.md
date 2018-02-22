@@ -488,7 +488,7 @@ Best results we have gotten so far using just logistic regression! There are onl
 ### Result Summary: 
 
 <figure>
-    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/results_summary.png"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/results_summary.png"></a>
+    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/results_summary.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/results_summary.PNG"></a>
 </figure>
 
 
@@ -527,7 +527,7 @@ Next we will try an ensemble method, Random Forest Classifier.
 ### Result Summary:
 
 <figure>
-    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/results_summary2.png"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/results_summary2.png"></a>
+    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/results_summary.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/results_summary2.PNG"></a>
 </figure>
 
 
