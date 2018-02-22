@@ -190,7 +190,7 @@ to approx. 750MB. (More than halved the size, Perfect!)
 First, let's look into the distribution of class labels,
 
 <figure>
-    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/features_dist.png"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/features_dist.png"></a>
+    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/label.png"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/label.png"></a>
 </figure>
 
 You can see that the imbalances between the classes are huge, some of
