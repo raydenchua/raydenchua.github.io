@@ -14,8 +14,8 @@ comments: true
 
 With the ever improving networking technologies, our world is now more
 connected than ever. The number of internet users has been growing
-exponentially every year and is increasing at a high pace as you read.
-http://www.internetlivestats.com/internet-users/
+exponentially every year and is increasing at a high pace as you read.[^1]
+
 
 This advancement leads to the greater possibilities in areas such as the
 Internet of Things (IoT). IoT are any devices with the capability to be
@@ -278,6 +278,7 @@ features were chosen:
 \'URG\_Flag\_Count\', \'Destination\_Port\'
 
 **RadViz Plot**
+
 RadViz is a multivariate data visualization algorithm that 
 plots each axis uniformly around the circumference of a circle 
 then plots points on the interior of the circle such that the 
@@ -336,7 +337,7 @@ test set.
 <figure>
     <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/1a_logregnobal.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/1a_logregnobal.PNG"></a>
     <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/1b_logregnobal_classrpt.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/1b_logregnobal_classrpt.PNG"></a>
-    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/1c_logregnobal_cm.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/1c_logregnobal_cm.PNG"></a>
+    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/1c_logregnobal_cm.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/1c_logregnobal_cm.PNG"><figcaption>Confusion Matrix</figcaption></a>
 </figure>
 
 As expected, the model has difficulty predicting the minority classes,
@@ -351,7 +352,7 @@ improve.
 <figure>
     <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/2a_logregbal.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/2a_logregbal.PNG"></a>
     <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/2b_logregbal_classrpt.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/2b_logregbal_classrpt.PNG"></a>
-    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/2c_logregbal_cm.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/2c_logregbal_cm.PNG"></a>
+    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/2c_logregbal_cm.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/2c_logregbal_cm.PNG"><figcaption>Confusion Matrix</figcaption></a>
 </figure>
 
 This is quite surprising, by just assigning more weights to the minority
@@ -378,7 +379,7 @@ Here, the classes with counts \> 4000 were shrunk to 4000 and those with
     <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/3a_rus.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/3a_rus.PNG"></a>
     <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/3b_ruslogreg.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/3b_ruslogreg.PNG"></a>
     <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/3c_ruslogreg_classrpt.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/3c_ruslogreg_classrpt.PNG"></a>
-    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/3d_ruslogreg_cm.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/3d_ruslogreg_cm.PNG"></a>
+    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/3d_ruslogreg_cm.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/3d_ruslogreg_cm.PNG"><figcaption>Confusion Matrix</figcaption></a>
 </figure>
 
 A balanced class weight was applied to give more weightage to the
@@ -394,7 +395,7 @@ Tomek was unable to downsample to that ideal ratio.
     <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/4a_tomek.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/4a_tomek.PNG"></a>
     <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/4b_tllogreg.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/4b_tllogreg.PNG"></a>
     <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/4c_tllogreg_classrpt.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/4c_tllogreg_classrpt.PNG"></a>
-    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/4d_tllogreg_cm.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/4d_tllogreg_cm.PNG"></a>
+    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/4d_tllogreg_cm.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/4d_tllogreg_cm.PNG"><figcaption>Confusion Matrix</figcaption></a>
 </figure>
 
 The results were worse than that of random
@@ -413,7 +414,7 @@ remain as they are.
     <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/5a_ros.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/5a_ros.PNG"></a>
     <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/5b_roslogreg.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/5b_roslogreg.PNG"></a>
     <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/5c_roslogreg_classrpt.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/5c_roslogreg_classrpt.PNG"></a>
-    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/5d_roslogreg_cm.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/5d_roslogreg_cm.PNG"></a>
+    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/5d_roslogreg_cm.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/5d_roslogreg_cm.PNG"><figcaption>Confusion Matrix</figcaption></a>
 </figure>
 
 The results is relatively good but the
@@ -428,7 +429,7 @@ Same ratio used as the RandomOverSampler.
     <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/6a_smote.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/6a_smote.PNG"></a>
     <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/6b_smotelogreg.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/6b_smotelogreg.PNG"></a>
     <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/6c_smotelogreg_classrpt.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/6c_smotelogreg_classrpt.PNG"></a>
-    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/6d_smotelogreg_cm.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/6d_smotelogreg_cm.PNG"></a>
+    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/6d_smotelogreg_cm.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/6d_smotelogreg_cm.PNG"><figcaption>Confusion Matrix</figcaption></a>
 </figure>
 
 SMOTE seems to have performed quite well for us here, it is the better
@@ -458,7 +459,7 @@ The under sampler and over sampler used were set as default
     <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/7a_msmean.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/7a_msmean.PNG"></a>
     <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/7b_msmeanlogreg.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/7b_msmeanlogreg.PNG"></a>
     <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/7c_msmeanlogreg_classrpt.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/7c_msmeanlogreg_classrpt.PNG"></a>
-    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/7d_msmeanlogreg_cm.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/7d_msmeanlogreg_cm.PNG"></a>
+    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/7d_msmeanlogreg_cm.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/7d_msmeanlogreg_cm.PNG"><figcaption>Confusion Matrix</figcaption></a>
 </figure>
 
 Pretty decent results. 106 attacks wrongly classed as benign.
@@ -469,7 +470,7 @@ Next, I proceeded with using the median as ratio.
     <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/8a_msmed.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/8a_msmed.PNG"></a>
     <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/8b_msmedlogreg.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/8b_msmedlogreg.PNG"></a>
     <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/8c_msmedlogreg_classrpt.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/8c_msmedlogreg_classrpt.PNG"></a>
-    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/8d_msmedlogreg_cm.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/8d_msmedlogreg_cm.PNG"></a>
+    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/8d_msmedlogreg_cm.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/8d_msmedlogreg_cm.PNG"><figcaption>Confusion Matrix</figcaption></a>
 </figure>
 
 Even better results using the median
@@ -482,11 +483,24 @@ better results than RandomOverSampler previously.
     <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/9a_smotems.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/9a_smotems.PNG"></a>
     <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/9b_smotemslogreg.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/9b_smotemslogreg.PNG"></a>
     <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/9c_smotemslogreg_classrpt.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/9c_smotemslogreg_classrpt.PNG"></a>
-    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/9d_smotemslogreg_cm.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/9d_smotemslogreg_cm.PNG"></a>
+    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/9d_smotemslogreg_cm.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/9d_smotemslogreg_cm.PNG"><figcaption>Confusion Matrix</figcaption></a>
 </figure>
 
 Best results we have gotten so far using just logistic regression! There
 are only 71 attacks wrongly classed as benign.
+
+| **Model** | **Attacks  Undetected** | **Weighted Average  Precision** | **Weighted Average  Recall** | **Weighted Average  f1-score** |
+|:-----------------------------------------------------------------------------------:|:-----------------------:|:---------------------------------------------:|:---------------------------------------------:|:---------------------------------------------:|
+| Logistic Regression without balancing | 22,081 | Unreliable as many classes were not predicted | Unreliable as many classes were not predicted | Unreliable as many classes were not predicted |
+| Logistic Regression with balanced class weights | 412 | 0.94 | 0.70 | 0.79 |
+| RandomUnderSampler: Logistic Regression with balanced class weights | 152 | 0.94 | 0.71 | 0.79 |
+| TomekLink: Logistic Regression with balanced class weights | 2103 | 0.94 | 0.69 | 0.78 |
+| RandomOverSampler: Logistic Regression with balanced class weights | 207 | 0.94 | 0.75 | 0.82 |
+| SMOTE: Logistic Regression with balanced class weights | 103 | 0.95 | 0.75 | 0.82 |
+| Multi-resampler (Mean): Logistic Regression with balanced class weights | 106 | 0.95 | 0.74 | 0.81 |
+| Multi-resampler (Median): Logistic Regression with balanced class weights | 95 | 0.94 | 0.72 | 0.80 |
+| Multi-resampler (Median and SMOTE): Logistic Regression with balanced class weights | 71 | 0.94 | 0.72 | 0.79 |
+
 
 ### Isolation Forest
 
@@ -496,3 +510,5 @@ repeat until every point is isolated into a leaf node. The main
 intuition is a point in low density space will tend to get isolated with
 fewer random splits than points in higher density spaces. The depth of
 high density spaces likely have deeper depth.
+
+[^1]: <a href="http://www.internetlivestats.com/internet-users">Internet Users</a>
