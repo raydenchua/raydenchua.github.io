@@ -284,7 +284,7 @@ features were chosen:
 As seen from the RadViz plot, there are no clear distinction between the
 classes. They seem to overlap each other quite badly.
 
-## Model
+## Modeling
 
 **Approach:**
 
@@ -341,10 +341,11 @@ improve.
 
 ### Logistic Regression with balanced class weights
 
-![](media/image9.PNG){width="6.268055555555556in"
-height="1.301388888888889in"}![](media/image10.PNG){width="5.490349956255468in"
-height="3.604669728783902in"}![](media/image11.PNG){width="6.268055555555556in"
-height="3.973611111111111in"}
+<figure>
+    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/2a_logregbal.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/2a_logregbal.PNG"></a>
+    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/2b_logregbal_classrpt.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/2b_logregbal_classrpt.PNG"></a>
+    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/2c_logregbal_cm.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/2c_logregbal_cm.PNG"></a>
+</figure>
 
 This is quite surprising, by just assigning more weights to the minority
 classes when performing logistic regression actually improves the result
@@ -366,11 +367,12 @@ Therefore, an ideal resampled ratio has to be entered to prevent that.
 Here, the classes with counts \> 4000 were shrunk to 4000 and those with
 \< 4000 will remain as they are.
 
-![](media/image12.PNG){width="6.268055555555556in"
-height="1.7805555555555554in"}![](media/image13.PNG){width="6.268055555555556in"
-height="1.7180555555555554in"}![](media/image14.PNG){width="5.448676727909011in"
-height="3.5629975940507435in"}![](media/image15.PNG){width="6.268055555555556in"
-height="3.9743055555555555in"}
+<figure>
+    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/3a_rus.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/3a_rus.PNG"></a>
+    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/3b_ruslogreg.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/3b_ruslogreg.PNG"></a>
+    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/3c_ruslogreg_classrpt.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/3c_ruslogreg_classrpt.PNG"></a>
+    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/3d_ruslogreg_cm.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/3d_ruslogreg_cm.PNG"></a>
+</figure>
 
 A balanced class weight was applied to give more weightage to the
 smaller classes. The results seem better, with 152 attacks classified as
@@ -381,11 +383,14 @@ benign traffic.
 Same ratio as random under sampling was applied. However, it seems that
 Tomek was unable to downsample to that ideal ratio.
 
-![](media/image16.PNG){width="6.268055555555556in"
-height="1.8694444444444445in"}![](media/image17.PNG){width="6.268055555555556in"
-height="1.7326388888888888in"}![](media/image18.PNG){width="5.479931102362205in"
-height="3.594251968503937in"}![](media/image19.PNG){width="6.268055555555556in"
-height="3.928472222222222in"}The results were worse than that of random
+<figure>
+    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/4a_tomek.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/4a_tomek.PNG"></a>
+    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/4b_tllogreg.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/4b_tllogreg.PNG"></a>
+    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/4c_tllogreg_classrpt.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/4c_tllogreg_classrpt.PNG"></a>
+    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/4d_tllogreg_cm.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/4d_tllogreg_cm.PNG"></a>
+</figure>
+
+The results were worse than that of random
 undersampling and just using balanced class weights without resampling.
 2103 attacks classed as benign.
 
