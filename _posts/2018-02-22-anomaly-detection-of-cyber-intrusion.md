@@ -110,72 +110,71 @@ Information Systems Security and Privacy (ICISSP), Purtogal, January
 
 ## Data Wrangling
 
-1.  **Handling of null values:**
+**Handling of null values:**
 
-    There were *1358* observations with null values found in the feature
-    *'Flow\_Bytes\_persec'*. Looking into the feature, I discovered that
-    there were *1509* entries label as 'Infinity'.
+There were *1358* observations with null values found in the feature
+*'Flow\_Bytes\_persec'*. Looking into the feature, I discovered that
+there were *1509* entries label as 'Infinity'.
 
-    A cross check with the other time-based feature,
-    *'Flow\_Packets\_persec'*, I found *2867* 'Infinity' entries, which
-    is the same amount for *'Flow\_Bytes\_persec'* if you sum up the
-    count of null values and 'Infinity' entries. This more of less
-    confirm that the null values were supposed to be marked as
-    'Infinity'.
+A cross check with the other time-based feature,
+*'Flow\_Packets\_persec'*, I found *2867* 'Infinity' entries, which
+is the same amount for *'Flow\_Bytes\_persec'* if you sum up the
+count of null values and 'Infinity' entries. This more of less
+confirm that the null values were supposed to be marked as
+'Infinity'.
 
-    Now, both the features are supposed to be float values, why was it
-    marked as 'Infinity' then? Checking up some rows with
-    *\'Flow\_Packets\_persec\'* and *\'Flow\_Bytes\_persec\'* not being
-    'Infinity', it seems that they were derived from taking either
-    *\'Total\_Fwd\_Packets\'* + *\'Total\_Backward\_Packets\'* or
-    *\'Total\_Length\_of\_Fwd\_Packets\'* +
-    *\'Total\_Length\_of\_Bwd\_Packets\'* and divided by
-    *\'Flow\_Duration\'. *
+Now, both the features are supposed to be float values, why was it
+marked as 'Infinity' then? Checking up some rows with
+*\'Flow\_Packets\_persec\'* and *\'Flow\_Bytes\_persec\'* not being
+'Infinity', it seems that they were derived from taking either
+*\'Total\_Fwd\_Packets\'* + *\'Total\_Backward\_Packets\'* or
+*\'Total\_Length\_of\_Fwd\_Packets\'* +
+*\'Total\_Length\_of\_Bwd\_Packets\'* and divided by
+*\'Flow\_Duration\'. *
 
-    Looking into the *'Flow\_Duration'* column and found that those
-    \'Infinity\' values were derived due to *\'Flow\_Duration\'*(the
-    denominator) being 0.
+Looking into the *'Flow\_Duration'* column and found that those
+\'Infinity\' values were derived due to *\'Flow\_Duration\'*(the
+denominator) being 0.
 
-    Therefore, I replaced these missing and \'Infinity\' values with
-    either *its \'Total\_Fwd\_Packets\'* + *\'Total\_Backward\_Packets*
-    or *\'Total\_Length\_of\_Fwd\_Packets\'* +
-    *\'Total\_Length\_of\_Bwd\_Packets\'.*
+Therefore, I replaced these missing and \'Infinity\' values with
+either *its \'Total\_Fwd\_Packets\'* + *\'Total\_Backward\_Packets*
+or *\'Total\_Length\_of\_Fwd\_Packets\'* +
+*\'Total\_Length\_of\_Bwd\_Packets\'.*
 
-2.  **Negative values:**
+**Negative values:**
 
-    I also found some negative values that did not make sense in 'Flow
-    Duration', \'Fwd\_Header\_Length\', \'Init\_Win\_bytes\_forward\',
-    \'Init\_Win\_bytes\_backward\'.
+I also found some negative values that did not make sense in 'Flow
+Duration', \'Fwd\_Header\_Length\', \'Init\_Win\_bytes\_forward\',
+\'Init\_Win\_bytes\_backward\'.
 
-    Upon checking that these observations belong to the majority class
-    'BENIGN', which we have no shortage of, I decided to drop these
-    entries.
+Upon checking that these observations belong to the majority class
+'BENIGN', which we have no shortage of, I decided to drop these
+entries.
 
-3.  **Categorical Features:**
+**Categorical Features:**
 
-    There are some categorical features that I found can be quite
-    useful.
+There are some categorical features that I found can be quite
+useful.
 
-    The type of transfer protocol used. This feature was converted into
-    dummy variables, 'Protocol\_0', 'Protocol\_6', and 'Protocol\_17'.
+The type of transfer protocol used. This feature was converted into
+dummy variables, 'Protocol\_0', 'Protocol\_6', and 'Protocol\_17'.
 
-    The Source and Destination Port could potentially identify some of
-    the attacks that uses certain port numbers. However, after looking
-    up on the number of unique port numbers, there were too many (64k
-    for Source\_Port' and 53k for 'Destination\_Port') of them to create
-    dummy variables out of.
+The Source and Destination Port could potentially identify some of
+the attacks that uses certain port numbers. However, after looking
+up on the number of unique port numbers, there were too many (64k
+for Source\_Port' and 53k for 'Destination\_Port') of them to create
+dummy variables out of.
 
-    The port numbers in the range 0 to 1023 are the well-known ports or
-    system ports. They are used by system processes that provide widely
-    used types of network services. Therefore I labelled the ports as 1
-    if they are within the well-known ports, else 0.
+The port numbers in the range 0 to 1023 are the well-known ports or
+system ports. They are used by system processes that provide widely
+used types of network services. Therefore I labelled the ports as 1
+if they are within the well-known ports, else 0.
 
-4.  **Changing of data type:**
+**Changing of data type:**
 
 <figure>
     <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/change_type.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/change_type.PNG"></a>
 </figure>
-
 
 The data types of the features were changed in order to reduce
 computational time for subsequent codes. Categorical features were
@@ -200,23 +199,23 @@ together with the 'BENIGN' class.
 The following is the proportion of the classes in numerical
 representation:
 
-  **Label**                     **Count**   **Proportion**
-  ----------------------------- ----------- ----------------
-  BENIGN                        2359289     0.8334521
-  Bot                           1966        0.00069513
-  DDoS                          41835       0.01477914
-  DoS GoldenEye                 10293       0.0036367
-  DoS Hulk                      231073      0.0816306
-  DoS Slowhttptest              5499        0.0019435
-  DoS slowloris                 5796        0.0020484
-  FTP-Patator                   7938        0.0028042
-  Heartbleed                    11          0.0000048
-  Infiltration                  36          0.00001312
-  PortScan                      158930      0.056144
-  SSH-Patator                   5897        0.0020833
-  Web Attack -- Brute Force     1507        0.0005329
-  Web Attack -- Sql Injection   21          0.00000711
-  Web Attack -- XSS             652         0.0002301
+  **Label**                    | **Count**|  **Proportion**
+  -----------------------------| ---------|----------------
+  BENIGN                       | 2359289  |   0.8334521
+  Bot                          | 1966     |   0.00069513
+  DDoS                         | 41835    |   0.01477914
+  DoS GoldenEye                | 10293    |   0.0036367
+  DoS Hulk                     | 231073   |   0.0816306
+  DoS Slowhttptest             | 5499     |   0.0019435
+  DoS slowloris                | 5796     |   0.0020484
+  FTP-Patator                  | 7938     |   0.0028042
+  Heartbleed                   | 11       |   0.0000048
+  Infiltration                 | 36       |   0.00001312
+  PortScan                     | 158930   |   0.056144
+  SSH-Patator                  | 5897     |   0.0020833
+  Web Attack -- Brute Force    | 1507     |   0.0005329
+  Web Attack -- Sql Injection  | 21       |   0.00000711
+  Web Attack -- XSS            | 652      |   0.0002301
 
 Hostile classes such as *'Heartbleed', 'Infiltration', 'Web Attack --
 Sql Injection', 'Bot', 'Web Attack -- Brute Force'* and *'Web Attack --
