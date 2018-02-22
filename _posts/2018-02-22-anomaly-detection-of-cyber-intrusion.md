@@ -96,11 +96,8 @@ Most of the features can generally be grouped into the following:
     RST\_Flag\_Count, PSH\_Flag\_Count, ACK\_Flag\_Count,
     URG\_Flag\_Count, CWE\_Flag\_Count, ECE\_Flag\_Count
 
-12. **Flow labels --** Label (\'BENIGN\' , \'FTP-Patator\' ,
-    \'SSH-Patator\', \'DoS slowloris\', \'DoS Slowhttptest\', \'DoS
-    Hulk\', \'DoS GoldenEye\', \'Heartbleed\', \'Web Attack -- Brute
-    Force\', \'Web Attack -- XSS\', \'Web Attack -- Sql Injection\' ,
-    \'Infiltration\', \'Bot\', \'DDoS\' , \'PortScan\')
+12. **Flow labels --** Label 
+    The 15 labels are: BENIGN, FTP-Patator, SSH-Patator, DoS slowloris, DoS Slowhttptest, DoS Hulk, DoS GoldenEye, Heartbleed, Web Attack -- Brute Force, Web Attack -- XSS, Web Attack -- Sql Injection, Infiltration, Bot, DDoS , PortScan
 
 For a more detailed description of each feature, please refer to the
 excel file on **my github**.
