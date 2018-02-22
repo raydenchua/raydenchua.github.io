@@ -177,14 +177,14 @@ Information Systems Security and Privacy (ICISSP), Purtogal, January
 </figure>
 
 
-    The data types of the features were changed in order to reduce
-    computational time for subsequent codes. Categorical features were
-    changed from string objects type to category type. The int64 and
-    float64 features were reduced to their respective datatype that can
-    handle their range of values.
+The data types of the features were changed in order to reduce
+computational time for subsequent codes. Categorical features were
+changed from string objects type to category type. The int64 and
+float64 features were reduced to their respective datatype that can
+handle their range of values.
 
-    After changing the types, the data size reduced from approx. 1.6GB
-    to approx. 750MB. (More than halved the size, Perfect!)
+After changing the types, the data size reduced from approx. 1.6GB
+to approx. 750MB. (More than halved the size, Perfect!)
 
 ## Exploratory Data Analysis (EDA)
 
