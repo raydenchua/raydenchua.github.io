@@ -486,21 +486,41 @@ better results than RandomOverSampler previously.
     <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/9d_smotemslogreg_cm.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/9d_smotemslogreg_cm.PNG"><figcaption>Confusion Matrix</figcaption></a>
 </figure>
 
-Best results we have gotten so far using just logistic regression! There
-are only 71 attacks wrongly classed as benign.
+Best results we have gotten so far using just logistic regression! There are only 71 attacks wrongly classed as benign.
 
 | **Model** | **Attacks  Undetected** | **Weighted Average  Precision** | **Weighted Average  Recall** | **Weighted Average  f1-score** |
-|:-----------------------------------------------------------------------------------:|:-----------------------:|:---------------------------------------------:|:---------------------------------------------:|:---------------------------------------------:|
+|:---------:|:-----------------------:|:-------------------------------:|:----------------------------:|:------------------------------:|
 | Logistic Regression without balancing | 22,081 | Unreliable as many classes were not predicted | Unreliable as many classes were not predicted | Unreliable as many classes were not predicted |
 | Logistic Regression with balanced class weights | 412 | 0.94 | 0.70 | 0.79 |
-| RandomUnderSampler: Logistic Regression with balanced class weights | 152 | 0.94 | 0.71 | 0.79 |
-| TomekLink: Logistic Regression with balanced class weights | 2103 | 0.94 | 0.69 | 0.78 |
-| RandomOverSampler: Logistic Regression with balanced class weights | 207 | 0.94 | 0.75 | 0.82 |
-| SMOTE: Logistic Regression with balanced class weights | 103 | 0.95 | 0.75 | 0.82 |
-| Multi-resampler (Mean): Logistic Regression with balanced class weights | 106 | 0.95 | 0.74 | 0.81 |
-| Multi-resampler (Median): Logistic Regression with balanced class weights | 95 | 0.94 | 0.72 | 0.80 |
-| Multi-resampler (Median and SMOTE): Logistic Regression with balanced class weights | 71 | 0.94 | 0.72 | 0.79 |
+| **RandomUnderSampler:** Logistic Regression with balanced class weights | 152 | 0.94 | 0.71 | 0.79 |
+| **TomekLink:** Logistic Regression with balanced class weights | 2103 | 0.94 | 0.69 | 0.78 |
+| **RandomOverSampler:** Logistic Regression with balanced class weights | 207 | 0.94 | 0.75 | 0.82 |
+| **SMOTE:** Logistic Regression with balanced class weights | 103 | 0.95 | 0.75 | 0.82 |
+| **Multi-resampler (Mean):** Logistic Regression with balanced class weights | 106 | 0.95 | 0.74 | 0.81 |
+| **Multi-resampler (Median):** Logistic Regression with balanced class weights | 95 | 0.94 | 0.72 | 0.80 |
+| **Multi-resampler (Median and SMOTE):** Logistic Regression with balanced class weights | 71 | 0.94 | 0.72 | 0.79 |
 
+Multi-resampler (Median and SMOTE) is the best resampling technique for our objective.
+
+We will now explore a few other classification models to see if we can further decrease the attacks misclassed as benign.
+
+Starting off with k-Nearest Neighbors,
+<figure>
+    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/10a_smsknn_classrpt.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/10a_smsknn_classrpt.PNG"></a>
+    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/10b_smsknn_cm.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/10b_smsknn_cm.PNG"><figcaption>Confusion Matrix</figcaption></a>
+</figure>
+
+The number of attacks wrongly classed as benign is at 16433, that is quite far away from the results we got from logistic regression.
+However, it seems like it does relatively well at minimising the false negative, you can see that it has the highest recall for the benign class till now (0.88)
+We shall see if we can make use of this model at later part.
+
+Next, we will use Support Vector Machine fro classification.
+
+<figure>
+    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/11a_smssvc.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/11a_smssvc.PNG"></a>
+    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/11b_smssvc_classrpt.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/11b_smssvc_classrpt.PNG"></a>
+    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/11c_smssvc_cm.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/11c_smssvc_cm.PNG"><figcaption>Confusion Matrix</figcaption></a>
+</figure>
 
 ### Isolation Forest
 
