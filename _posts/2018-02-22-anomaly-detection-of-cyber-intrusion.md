@@ -172,7 +172,11 @@ Information Systems Security and Privacy (ICISSP), Purtogal, January
 
 4.  **Changing of data type:**
 
-    ![](media/image2.png){width="6.268055555555556in" height="3.35in"}
+<figure>
+    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/change_type.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/change_type.PNG"></a>
+    <figcaption><a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/change_type.PNG" title="Change Data Type">Change Data Type</a>.</figcaption>
+</figure>
+
 
     The data types of the features were changed in order to reduce
     computational time for subsequent codes. Categorical features were
