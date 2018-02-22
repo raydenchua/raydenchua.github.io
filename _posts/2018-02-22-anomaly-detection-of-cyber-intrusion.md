@@ -174,7 +174,6 @@ Information Systems Security and Privacy (ICISSP), Purtogal, January
 
 <figure>
     <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/change_type.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/change_type.PNG"></a>
-    <figcaption><a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/change_type.PNG" title="Change Data Type">Change Data Type</a>.</figcaption>
 </figure>
 
 
