@@ -277,6 +277,13 @@ features were chosen:
 \'Avg\_Fwd\_Segment\_Size\', \'Fwd\_Packet\_Length\_Min\',
 \'URG\_Flag\_Count\', \'Destination\_Port\'
 
+**RadViz Plot**
+RadViz is a multivariate data visualization algorithm that 
+plots each axis uniformly around the circumference of a circle 
+then plots points on the interior of the circle such that the 
+point normalizes its values on the axes from the center to 
+each arc
+
 <figure>
     <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/radviz.png"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/radviz.png"></a>
 </figure>
