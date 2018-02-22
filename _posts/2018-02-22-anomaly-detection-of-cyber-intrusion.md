@@ -8,9 +8,9 @@ feature: https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/maste
 comments: true
 ---
 
-**Anomaly Detection of Cyber Intrusion**
+# Anomaly Detection of Cyber Intrusion
 
-**Introduction**
+## Introduction
 
 With the ever improving networking technologies, our world is now more
 connected than ever. The number of internet users has been growing
@@ -30,7 +30,7 @@ reliance on them increases the value of hacking.
 It is therefore of paramount importance that the cybersecurity field
 grows along as well.
 
-**Objective**
+## Objective
 
 As my capstone project for the Data Science Immersive Course I partake
 under General Assembly, I will explore the effectiveness of machine
@@ -42,7 +42,7 @@ a high recall rate for the hostile traffic flows). The secondary goal is
 then to make sure that there's as little false alarms as possible (high
 precision rate).
 
-**Dataset**
+## Dataset
 
 The Intrusion Detection Evaluation Dataset (CICIDS2017) was obtained
 from University of New Brunswick.
@@ -54,23 +54,19 @@ forward flows (Flow initiator to Destination) and backward flows
 
 Most of the features can generally be grouped into the following:
 
-1.  **IP Addresses -** Source\_IP, Destination\_IP
+1.  **IP Addresses --** Source\_IP, Destination\_IP
 
 2.  **Ports --** Source\_Port, Destination\_Port
 
 3.  **Transport Protocol (TCP:6, UDP:17) -** Protocol
 
-4.  **Number of packets** - Total\_Fwd\_Packets,
-    Total\_Backward\_Packets, Subflow\_Fwd\_Packets,
-    Subflow\_Bwd\_Packets, Flow\_Packets\_persec, act\_data\_pkt\_fwd,
+4.  **Number of packets--** Total\_Fwd\_Packets, Total\_Backward\_Packets, Subflow\_Fwd\_Packets, Subflow\_Bwd\_Packets, Flow\_Packets\_persec, act\_data\_pkt\_fwd,
 
-5.  **Packet Size -** Total\_Length\_of\_Fwd\_Packets,
+5.  **Packet Size --** Total\_Length\_of\_Fwd\_Packets,
     Total\_Length\_of\_Bwd\_Packets, Fwd\_Packet\_Length\_Max,
     Fwd\_Packet\_Length\_Min, Fwd\_Packet\_Length\_Mean,
     Fwd\_Packet\_Length\_Std, Bwd\_Packet\_Length\_Max,
-    Bwd\_Packet\_Length\_Min,
-
-    Bwd\_Packet\_Length\_Mean, Bwd\_Packet\_Length\_Std,
+    Bwd\_Packet\_Length\_Min, Bwd\_Packet\_Length\_Mean, Bwd\_Packet\_Length\_Std,
     Flow\_Bytes\_persec, Subflow\_Fwd\_Bytes, Subflow\_Bwd\_Bytes,
     Min\_Packet\_Length, Max\_Packet\_Length, Packet\_Length\_Mean,
     Packet\_Length\_Std, Packet\_Length\_Variance,
@@ -115,7 +111,7 @@ Intrusion Traffic Characterization", 4th International Conference on
 Information Systems Security and Privacy (ICISSP), Purtogal, January
 2018*
 
-**Data Wrangling**
+## Data Wrangling
 
 1.  **Handling of null values:**
 
@@ -190,7 +186,7 @@ Information Systems Security and Privacy (ICISSP), Purtogal, January
     After changing the types, the data size reduced from approx. 1.6GB
     to approx. 750MB. (More than halved the size, Perfect!)
 
-**Exploratory Data Analysis (EDA)**
+## Exploratory Data Analysis (EDA)
 
 First, let's look into the distribution of class labels,
 
@@ -235,7 +231,7 @@ the hostile classes' distribution were not visible in the each feature's
 plot. (Due to the large number of plots, please refer to my **Jupyter
 Notebook** to view the plots)
 
-**Features Selection**
+## Features Selection
 
 There are various methods available to select features.
 
@@ -287,7 +283,7 @@ height="4.364583333333333in"}
 As seen from the RadViz plot, there are no clear distinction between the
 classes. They seem to overlap each other quite badly.
 
-**Model**
+## Model
 
 **Approach:**
 
@@ -321,7 +317,7 @@ classes. They seem to overlap each other quite badly.
 
 -   Unsupervised learning: Isolation Forest
 
-**Logistic Regression without balancing the dataset**
+### Logistic Regression without balancing the dataset
 
 Here we will begin with running Logistic Regression without handling the
 imbalance in data, this will be the benchmark result that we will aim to
@@ -341,7 +337,7 @@ now proceed with a simple balancing of data by choosing balanced for the
 logistic regression\'s class weights and see how much the result
 improve.
 
-**Logistic Regression with balanced class weights**
+### Logistic Regression with balanced class weights
 
 ![](media/image9.PNG){width="6.268055555555556in"
 height="1.301388888888889in"}![](media/image10.PNG){width="5.490349956255468in"
@@ -355,7 +351,7 @@ However, there still seem to be quite a number of misclassification. We
 will now proceed to try out some resampling methods using the
 imbalanced-learn package.
 
-**Undersampling: Random Undersampling**
+### Undersampling: Random Undersampling
 
 For RandomUnderSampler, by default the ratio to be resampled is set as
 \'auto\' where the all classes are shrunk to the count of the smallest
@@ -378,7 +374,7 @@ A balanced class weight was applied to give more weightage to the
 smaller classes. The results seem better, with 152 attacks classified as
 benign traffic.
 
-**Undersampling: Tomek's Link**
+### Undersampling: Tomek's Link
 
 Same ratio as random under sampling was applied. However, it seems that
 Tomek was unable to downsample to that ideal ratio.
@@ -391,7 +387,7 @@ height="3.928472222222222in"}The results were worse than that of random
 undersampling and just using balanced class weights without resampling.
 2103 attacks classed as benign.
 
-**Oversampling: Random Oversampling**
+### Oversampling: Random Oversampling
 
 For RandomOverSampler, the ratio was enter for the minority classes
 instead. This is to prevent all minority classes being up sampled to the
@@ -407,7 +403,7 @@ height="3.879861111111111in"}The results is relatively good but the
 RandomUnderSampler still had better results. 207 attacks classed as
 benign.
 
-**Oversampling: Synthetic Minority Oversampling Technique (SMOTE)**
+### Oversampling: Synthetic Minority Oversampling Technique (SMOTE)
 
 Same ratio used as the RandomOverSampler.
 
@@ -423,7 +419,7 @@ SMOTE seems to have performed quite well for us here, it is the better
 oversampler compared to RandomOverSampler. The number of attacks wrongly
 classed as benign is only 103.
 
-**Customised Under and Over sampling: Multi-resampler**
+### Customised Under and Over sampling: Multi-resampler
 
 As the previous sampling methods only managed to either down sample or
 up sample, I thought it might be a good idea to combine both methods.
@@ -471,7 +467,7 @@ height="4.045138888888889in"}
 Best results we have gotten so far using just logistic regression! There
 are only 71 attacks wrongly classed as benign.
 
-**Isolation Forest**
+### Isolation Forest
 
 Choose a random field. Look at the minimum value and max value in that
 field and make some random split in between that space. Grow the tree
