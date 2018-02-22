@@ -47,10 +47,10 @@ precision rate).
 The Intrusion Detection Evaluation Dataset (CICIDS2017) was obtained
 from University of New Brunswick.
 
-It contains 15 types of labelled flows (Benign and up-to-date common
-attacks) and approximately 2.7 mil rows and 85 columns consisting of
-forward flows (Flow initiator to Destination) and backward flows
-(Destination back to Flow initiator).
+It contains **15 types of labelled flows** (Benign and up-to-date common
+attacks) and approximately **2.8 mil rows** and **85 columns** consisting of
+**forward flows** (Network flow from initiator to destination) and **backward flows**
+(Network flow from destination back to initiator).
 
 Most of the features can generally be grouped into the following:
 
@@ -488,6 +488,7 @@ better results than RandomOverSampler previously.
 
 Best results we have gotten so far using just logistic regression! There are only 71 attacks wrongly classed as benign.
 
+### Result Summary: 
 | **Model** | **Attacks  Undetected** | **Weighted Average  Precision** | **Weighted Average  Recall** | **Weighted Average  f1-score** |
 |:---------:|:-----------------------:|:-------------------------------:|:----------------------------:|:------------------------------:|
 | Logistic Regression without balancing | 22,081 | Unreliable as many classes were not predicted | Unreliable as many classes were not predicted | Unreliable as many classes were not predicted |
@@ -511,10 +512,8 @@ Starting off with k-Nearest Neighbors,
 </figure>
 
 The number of attacks wrongly classed as benign is at 16433, that is quite far away from the results we got from logistic regression.
-However, it seems like it does relatively well at minimising the false negative, you can see that it has the highest recall for the benign class till now (0.88)
-We shall see if we can make use of this model at later part.
 
-Next, we will use Support Vector Machine fro classification.
+Next, we will use Support Vector Machine for classification.
 
 <figure>
     <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/11a_smssvc.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/11a_smssvc.PNG"></a>
@@ -522,13 +521,31 @@ Next, we will use Support Vector Machine fro classification.
     <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/11c_smssvc_cm.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/11c_smssvc_cm.PNG"><figcaption>Confusion Matrix</figcaption></a>
 </figure>
 
-### Isolation Forest
+128 attacks went undetected. Seems quite decent but logistic Regression still performed best.
 
-Choose a random field. Look at the minimum value and max value in that
-field and make some random split in between that space. Grow the tree
-repeat until every point is isolated into a leaf node. The main
-intuition is a point in low density space will tend to get isolated with
-fewer random splits than points in higher density spaces. The depth of
-high density spaces likely have deeper depth.
+Next we will try an ensemble method, Random Forest Classifier.
+
+<figure>
+    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/12a_smsrf.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/12a_smsrf.PNG"></a>
+    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/12b_smsrf_classrpt.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/12b_smsrf_classrpt.PNG"></a>
+    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/12c_smsrf_cm.PNG"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/12c_smsrf_cm.PNG"><figcaption>Confusion Matrix</figcaption></a>
+</figure>
+
+2024 attacks went undetected, not the best model for our objective.
+
+### Result Summary: 
+| **Model** | **Attacks  Undetected** | **Weighted Average  Precision** | **Weighted Average  Recall** | **Weighted Average  f1-score** |
+|:---------:|:-----------------------:|:-------------------------------:|:----------------------------:|:------------------------------:|
+| **Multi-resampler (Median and SMOTE):** <br/>Logistic Regression with balanced class weights | 71 | 0.94 | 0.72 | 0.79 |
+| **Multi-resampler (Median and SMOTE):** <br/>k-Nearest Neighbors | 16,433 | 0.94 | 0.88 | 0.90 |
+| **Multi-resampler (Median and SMOTE):** <br/>Support Vector Machine (SVC) | 128 | 0.95 | 0.83 | 0.87 |
+| **Multi-resampler (Median and SMOTE):** <br/>Random Forest Classifier | 2024 | 0.97 | 0.80 | 0.87 |
+
+## Conclusion
+To conclude, the customised resampler seems to work best. By finding a mid point (the median), it balances the data without losing too much information from each class.
+With regards to the modelling, Logistic Regression is still the most effective, only 71 which is only 0.06% hostile traffic flows went undetected.
+However, there is a tradeoff in the amount of false alarms there are (in this case 193,204 around 33% of all benign flows in the test set). 
+If the model is deployed and solely relied on, the cost of looking into these false alarms could be high. 
+That, historically, has been the issue of anomaly-based intrusion detection systems.
 
 [^1]: <a href="http://www.internetlivestats.com/internet-users">Internet Users</a>
