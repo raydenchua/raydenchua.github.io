@@ -486,17 +486,11 @@ better results than RandomOverSampler previously.
 Best results we have gotten so far using just logistic regression! There are only 71 attacks wrongly classed as benign.
 
 ### Result Summary: 
-| **Model** | **Attacks  Undetected** | **Weighted Average  Precision** | **Weighted Average  Recall** | **Weighted Average  f1-score** |
-|:---------:|:-----------------------:|:-------------------------------:|:----------------------------:|:------------------------------:|
-| Logistic Regression without balancing | 22,081 | Unreliable as many classes were not predicted | Unreliable as many classes were not predicted | Unreliable as many classes were not predicted |
-| Logistic Regression with balanced class weights | 412 | 0.94 | 0.70 | 0.79 |
-| **RandomUnderSampler:** Logistic Regression with balanced class weights | 152 | 0.94 | 0.71 | 0.79 |
-| **TomekLink:** Logistic Regression with balanced class weights | 2103 | 0.94 | 0.69 | 0.78 |
-| **RandomOverSampler:** Logistic Regression with balanced class weights | 207 | 0.94 | 0.75 | 0.82 |
-| **SMOTE:** Logistic Regression with balanced class weights | 103 | 0.95 | 0.75 | 0.82 |
-| **Multi-resampler (Mean):** Logistic Regression with balanced class weights | 106 | 0.95 | 0.74 | 0.81 |
-| **Multi-resampler (Median):** Logistic Regression with balanced class weights | 95 | 0.94 | 0.72 | 0.80 |
-| **Multi-resampler (Median and SMOTE):** Logistic Regression with balanced class weights | 71 | 0.94 | 0.72 | 0.79 |
+
+<figure>
+    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/results_summary.png"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/results_summary.png"></a>
+</figure>
+
 
 Multi-resampler (Median and SMOTE) is the best resampling technique for our objective.
 
@@ -530,13 +524,12 @@ Next we will try an ensemble method, Random Forest Classifier.
 
 2024 attacks went undetected, not the best model for our objective.
 
-### Result Summary: 
-| **Model** | **Attacks  Undetected** | **Weighted Average  Precision** | **Weighted Average  Recall** | **Weighted Average  f1-score** |
-|:---------:|:-----------------------:|:-------------------------------:|:----------------------------:|:------------------------------:|
-| **Multi-resampler (Median and SMOTE):** <br/>Logistic Regression with balanced class weights | 71 | 0.94 | 0.72 | 0.79 |
-| **Multi-resampler (Median and SMOTE):** <br/>k-Nearest Neighbors | 16,433 | 0.94 | 0.88 | 0.90 |
-| **Multi-resampler (Median and SMOTE):** <br/>Support Vector Machine (SVC) | 128 | 0.95 | 0.83 | 0.87 |
-| **Multi-resampler (Median and SMOTE):** <br/>Random Forest Classifier | 2024 | 0.97 | 0.80 | 0.87 |
+### Result Summary:
+
+<figure>
+    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/results_summary2.png"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/results_summary2.png"></a>
+</figure>
+
 
 ## Conclusion
 To conclude, the customised resampler seems to work best. By finding a mid point (the median), it balances the data without losing too much information from each class.
