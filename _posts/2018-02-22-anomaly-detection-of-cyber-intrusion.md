@@ -317,11 +317,8 @@ classes. They seem to overlap each other quite badly.
 
     -   Support Vector Machine (SVC)
 
-    -   Ensemble Support Vector Machine (SVC)
-
     -   Random Forest Classifier
 
--   Unsupervised learning: Isolation Forest
 
 ### Logistic Regression without balancing the dataset
 
@@ -361,7 +358,9 @@ imbalanced-learn package.
 
 ### Undersampling: Random Undersampling
 
-For RandomUnderSampler, by default the ratio to be resampled is set as
+RandomUnderSampler under-samples the majority class(es) by randomly picking samples with or without replacement
+
+By default the ratio to be resampled is set as
 \'auto\' where the all classes are shrunk to the count of the smallest
 minority class.
 
@@ -385,6 +384,8 @@ benign traffic.
 
 ### Undersampling: Tomek's Link
 
+Tomek links remove unwanted overlap between classes where majority class links are removed until all minimally distanced nearest neighbor pairs are of the same class.
+
 Same ratio as random under sampling was applied. However, it seems that
 Tomek was unable to downsample to that ideal ratio.
 
@@ -401,7 +402,9 @@ undersampling and just using balanced class weights without resampling.
 
 ### Oversampling: Random Oversampling
 
-For RandomOverSampler, the ratio was enter for the minority classes
+RandomOverSampler, over-samples the minority class(es) by picking samples at random with replacement
+
+The ratio was entered for the minority classes
 instead. This is to prevent all minority classes being up sampled to the
 size of the benign class (1769353 counts). The classes with counts less
 than 4000 were up sampled to 4000 and those with more than 4000 will
@@ -420,6 +423,8 @@ benign.
 
 ### Oversampling: Synthetic Minority Oversampling Technique (SMOTE)
 
+SMOTE creates synthetic samples from the minority class instead of creating copies. The algorithm selects two or more similar instances (using a distance measure) and vary an instance one attribute at a time by a random amount within the difference to the neighboring instances.
+
 Same ratio used as the RandomOverSampler.
 
 <figure>
@@ -435,8 +440,8 @@ classed as benign is only 103.
 
 ### Customised Under and Over sampling: Multi-resampler
 
-As the previous sampling methods only managed to either down sample or
-up sample, I thought it might be a good idea to combine both methods.
+The previous sampling methods only managed to either down sample or
+up sample. For a multi class imbalance dataset, I thought it might be a good idea to combine both methods.
 
 The following function first finds the mean or median count of all
 classes. Next, it under sample the classes with counts higher than
