@@ -5,7 +5,7 @@ date: 2018-02-22
 excerpt: "My Capstone Project"
 tags: [project]
 feature: https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/cybersecurity-image.jpg
-comments: true
+comments: false
 ---
 
 # Anomaly Detection of Cyber Intrusion
