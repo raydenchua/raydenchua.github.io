@@ -543,4 +543,8 @@ However, there is a tradeoff in the amount of false alarms there are (in this ca
 If the model is deployed and solely relied on, the cost of looking into these false alarms could be high. 
 That, historically, has been the issue of anomaly-based intrusion detection systems.
 
+## Future Work
+- Explore the use of big data infrastructure like Hadoop and Spark to improve the computation efficiency
+- Explore unsupervised outlier detection methods such as Isolation Forest and Auto-Encoder. 
+
 [^1]: <a href="http://www.internetlivestats.com/internet-users">Internet Users</a>
