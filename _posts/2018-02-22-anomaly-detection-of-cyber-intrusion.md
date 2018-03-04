@@ -3,6 +3,7 @@ layout: post
 title: "Anomaly Detection of Cyber Intrusion"
 date: 2018-02-22
 excerpt: "My Capstone Project"
+project: true
 tags: [project]
 feature: https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/cybersecurity-image.jpg
 comments: false
