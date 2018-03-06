@@ -498,7 +498,7 @@ That, historically, has been the issue of anomaly-based intrusion detection syst
 - Explore unsupervised outlier detection methods such as Isolation Forest and Auto-Encoder. 
 
 
-## References:
+## References
 [^1]: <a href="http://www.internetlivestats.com/internet-users">Internet Users</a>
 
 [^2]: Dataset: Iman Sharafaldin, Arash Habibi Lashkari, and Ali A. Ghorbani, "Toward Generating a New Intrusion Detection Dataset and Intrusion Traffic Characterization", 4th International Conference on Information Systems Security and Privacy (ICISSP), Purtogal, January 2018
