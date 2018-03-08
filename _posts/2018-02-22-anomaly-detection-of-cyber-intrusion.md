@@ -46,14 +46,18 @@ precision rate).
 ## Dataset
 
 The Intrusion Detection Evaluation Dataset (CICIDS2017) was obtained
-from University of New Brunswick.[^2]
+from the Canadian Institute for Cybersecurity.[^2]
 
 It contains **15 types of labelled flows** (Benign and up-to-date common
 attacks) and approximately **2.8 mil rows** and **85 columns** consisting of
 **forward flows** (Network flow from initiator to destination) and **backward flows**
 (Network flow from destination back to initiator).
 
-The 15 class labels are: BENIGN, FTP-Patator, SSH-Patator, DoS slowloris, DoS Slowhttptest, DoS Hulk, DoS GoldenEye, Heartbleed, Web Attack -- Brute Force, Web Attack -- XSS, Web Attack -- Sql Injection, Infiltration, Bot, DDoS , PortScan
+The 15 flow labels can be grouped as such: 
+
+1. Normal Traffic: BENIGN
+
+2. Hostile Traffic: FTP-Patator, SSH-Patator, DoS slowloris, DoS Slowhttptest, DoS Hulk, DoS GoldenEye, Heartbleed, Web Attack -- Brute Force, Web Attack -- XSS, Web Attack -- Sql Injection, Infiltration, Bot, DDoS , PortScan
 
 ## Data Wrangling
 
