@@ -17,6 +17,10 @@ With the ever improving networking technologies, our world is now more
 connected than ever. The number of internet users has been growing
 exponentially every year and is increasing at a high pace as you read.[^1]
 
+<figure>
+    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/heatmap.png"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/iot.png"></a>
+</figure>
+Image source: <a href="http://backwardstimemachine.wordpress.com/">Backwards Time Machine</a>
 
 This advancement leads to the greater possibilities in areas such as the
 Internet of Things (IoT). IoT are any devices with the capability to be
