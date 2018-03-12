@@ -32,6 +32,10 @@ around.
 IoT is becoming a commonplace in most parts of our life and as such our
 reliance on them increases the value of hacking.
 
+<figure>
+    <a href="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/hacker_moolah.jpg"><img src="https://raw.githubusercontent.com/raydenchua/raydenchua.github.io/master/assets/img/anomaly/hacker_moolah.jpg"></a>
+</figure>
+
 It is therefore of paramount importance that the cybersecurity field
 grows along as well.
 
